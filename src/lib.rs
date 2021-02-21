@@ -229,11 +229,3 @@ mod tests {
         assert!(random_matrix.data.iter().max().unwrap() < &max);
     }
 }
-
-fn main() {
-    let matrix = Matrix::new_random(400, 400, 0, 200);
-    let matrix2 = Matrix::new_random(400, 400, 0, 200); 
-    let time = Instant::now();
-    matrix * matrix2;
-    println!("Elapsed time: {:.2?}", time.elapsed());
-}
